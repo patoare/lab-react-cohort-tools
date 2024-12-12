@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "./../assets/logo-ironhack-blue.png";
 
 function Navbar() {
@@ -8,7 +9,8 @@ function Navbar() {
 
           {/* Home Button (Logo) */}
           <button className="flex items-center text-l py-1">
-            <img src={logo} alt="Logo" className="h-8 w-auto" />
+            <NavLink to='/'> <img src={logo} alt="Logo" className="h-8 w-auto" /></NavLink>
+           
           </button>
         </div>
 
@@ -21,11 +23,12 @@ function Navbar() {
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
           <button className="flex items-center text-l py-1">
-            <img
+            <NavLink to='/profile'><img
               src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-cohort-tools-routing/profile-1.png"
               alt="Logo"
               className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
-            />
+            /></NavLink>
+            
           </button>
 
         </div>
